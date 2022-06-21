@@ -91,7 +91,7 @@ for i, val in np.ndenumerate(freqs):
            break
         sg384.write('FREQ ' + str(val) + ' GHz') #Set MW output frequency
         sg384.write('ENBR 1') #turn on MW output
-        time.sleep(5)
+        time.sleep(0)
         camera.TriggerSoftware.Execute()
         grab_2 = camera.RetrieveResult(10000, pylon.TimeoutHandling_Return)
         if grab_2.GrabSucceeded():
