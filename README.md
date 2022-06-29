@@ -10,10 +10,9 @@ Pypylon camera. If using the code for other similar purposes, it can be easily m
 This package includes the main program and all the other accompanying Python scripts that may or may not be used with the main file. __main.py__ initializes all the instruments connected and parameters needed. It also takes measurement automatically and creates 1-D contrast plot depicting the changes in the NV fluorecence intensity along with the generated magnetic image. We use this code most often for this project as to see if the signal to noise ratio is enough
 to create a reasonably clear magnetic image that shows the relative magnitude of local magnetic field domains. The code can be modified to show the polarity of magnetic fields as well, which will be described in more detail below. __Quantitative measurement.py__ is a developing script that can be used indepedently of the main program. Similar to the main program, it generates magnetic image showing the domain infomration of sample used, but additionaly, it is capable of showing the quantitative values of the fields as measured from the experiment. However,this code needs a very high signal-to-noise ratio in order to work appropriately, and thus, is rarely used. Lastly, __Histogram equalization.py__ is the script used to enhance the image contrast quality. Under low signal to noise ratio condition, we can use this script to obtain a better image as created from main.py. Script can be used either by calling in main.py or as post-measurement tool.
 
-__NOTE:__ package is used with python version at least 3.0.0, to use properly with all the functions, some other python packages may be installed firstly: 1.__pyvisa__, https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
+__NOTE:__ package is used with python version at least 3.0.0, to use properly with all the functions, some other python packages may be installed firstly: 
+1.__pyvisa__, https://pyvisa.readthedocs.io/en/latest/introduction/getting.html
 2.__pypylon__, https://github.com/basler/pypylon
-3.__mpl_toolkits.axes_grid1.anchored_artists__, 
-4.__PIL__. 
 If you download Python from anaconda distribution, the other necessary packages should be included automatically. 
 
 ## How to use the files
