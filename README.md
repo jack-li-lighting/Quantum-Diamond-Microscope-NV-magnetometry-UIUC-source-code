@@ -28,6 +28,10 @@ To be concise, a few __key lines__ will be introduced in __main.py__:
 
 These parameters should be enough to begin the experiment. Under most circumstances, no action is needed to change the other parts of the code, but it is always welcome to modify as you may need. To run "Histogram equalization.py" script, uncomment line 392; to obtain a polarity magnetic image, apply bias field using the power supply panel for the Helmholtz coil, and take a scan plot as indicated in the above number 3 tip. Then use the discovered probe frequency to modify line 74 to take measurement and obtain images.
 
+__NOTES ON THE DATA OBTAINED FROM THE CODE__: using the code you can get two types of data for storage/analysis:
+1. images generated directly. These can be saved as jpg/png/other image forms into your device. If nothing is changed from the initial version of main.py, you will obtain a total of 7 images in a single run, with the first 4 being scan plots (NV contrast/intensity/reference intensity/slope of contrast Versus MW frequency plots) and the last 3 being generated images (first one is the magnetic image, second one is the camera/signal image, and the last one is a contrast-enhanced image of the first image). To disable some image generation, go to respective lines 127-129, 277-278 and change the value "1" to "0".
+2. Raw data (in 1D/2D array form). 1-D scan plot is saved as 1D array, while the 3 2D images (magnetic image/raw signal iamge/raw reference image) are saved as 2D array. These sets of data can be recovered later and are important data to refer to later.
+
 ## How to debug
 Below we list common bugs that may happen during experiment:
 1. The first time you use the code, make sure that the file addresses are correct. The default address is the OS direct folder, so you can change the addresses to whatever you desire before measurement. Addresses lines include 179, 256, 262, 299, and 392. 
